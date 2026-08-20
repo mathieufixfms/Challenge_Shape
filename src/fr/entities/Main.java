@@ -12,10 +12,14 @@ public class Main {
 		// 2. Création de notre surface de dessin
         IJobImpl panel = new IJobImpl();
         
-        panel.addShape(new Circle(30,100,100));
-        panel.addShape(new Square(30,300,300));
-        panel.addShape(new Circle(60,500,200));
-        panel.addShape(new Square(90,350,50));
+        panel.addShape(new Circle(20,30,50));
+        Point p = new Point(100, 150);
+        panel.addShape(new Circle(15,p));
+        panel.addShape(new Square(50,200,200)); 
+        panel.addShape(new Square(65,200,50));
+        panel.addShape(new Circle(30, 300, 300));
+        Point g = new Point(50,100);
+        panel.addShape(new Square(1, g));
  
 		// 3. On ajoute la surface dans la fenêtre
         frame.add(panel);
