@@ -1,5 +1,7 @@
 package fr.entities;
 
+import java.awt.*;
+
 public class TestShape {
     public static void main(String[] args) {
 
