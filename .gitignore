@@ -1,0 +1,37 @@
+# Fichiers compilés Java
+*.class
+
+# Dossier de compilation
+bin/
+out/
+target/
+build/
+
+# Fichiers de logs
+*.log
+
+# Archives
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/private/
+build/
+dist/
+
+# Fichiers du système
+.DS_Store
+Thumbs.db
