@@ -1,4 +1,4 @@
-package fr.entities;
+// package fr.entities;
 /**
  * Représente un point dans un plan, défini par ses coordonnées x et y.
  */

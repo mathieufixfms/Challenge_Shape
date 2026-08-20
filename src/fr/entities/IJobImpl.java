@@ -1,4 +1,4 @@
-package fr.entities;
+//package fr.entities;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
