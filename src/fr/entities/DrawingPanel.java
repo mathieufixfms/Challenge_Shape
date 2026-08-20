@@ -52,5 +52,5 @@ public class DrawingPanel extends JPanel {
     public void fillCircle(Graphics g, int x, int y, int diametre) {
         g.fillOval(x, y, diametre, diametre);
     }
-	
+    
 }
