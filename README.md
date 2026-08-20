@@ -56,4 +56,38 @@ le groupe d'apprendre!
 - Java 8
 - Git / GitHub
 
-# Améliorations possibles
+# Organisation du code
+
+Main
+  │
+ crée
+  ↓
+La fenetre new JFrame
+  │
+ puis crée
+  ↓
+La surface de dessin 
+  │
+ puis crée les formes
+  ↓
+panel.addShape(new Circle(20,30,50));
+Point p = new Point(100, 150);
+panel.addShape(new Circle(15,p));
+panel.addShape(new Square(50,200,200)); 
+  │
+ ajoute la surface dans la fenêtre
+  ↓
+frame.add(panel);
+  │
+ajoute la surface dans la fenêtre
+  ↓
+frame.setSize(600, 400);
+  │
+configure ce qui doit se passer à la fermeture de la fenêtre
+  ↓
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  │
+maintenant que tout est configuré
+  ↓
+On affiche la fenêtre
+frame.setVisible(true);
