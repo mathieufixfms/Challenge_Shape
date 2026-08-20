@@ -3,13 +3,12 @@ package fr.entities;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.JPanel;
 
 
 // cré une surface de dessin
 // contient le Graphics et qui s'occupe de redessiner les formes.
-public class DrawingPanel extends JPanel {
+public class IJobImpl extends JPanel {
 	
 	// Liste de toutes les formes que l'on veut afficher.
     // On utilise Shape car la liste peut contenir : des Point, des Circle, des Square, etc.
@@ -54,5 +53,4 @@ public class DrawingPanel extends JPanel {
     public void fillCircle(Graphics g, int x, int y, int diametre) {
         g.fillOval(x, y, diametre, diametre);
     }
-    
 }

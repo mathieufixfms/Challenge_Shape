@@ -10,7 +10,7 @@ public class Main {
         JFrame frame = new JFrame("Mes formes");
  
 		// 2. Création de notre surface de dessin
-        DrawingPanel panel = new DrawingPanel();
+        IJobImpl panel = new IJobImpl();
         
         panel.addShape(new Circle(30,100,100));
         panel.addShape(new Square(30,300,300));
