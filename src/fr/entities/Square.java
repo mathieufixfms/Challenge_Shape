@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Square extends Shape {
 
     //Attributs
@@ -22,5 +24,10 @@ public class Square extends Shape {
     public void setSide(int side) {
         if (side < 0) side = 0;
         else this.side = side;
+    }
+
+    @Override
+    public void draw(Graphics g) {
+
     }
 }
