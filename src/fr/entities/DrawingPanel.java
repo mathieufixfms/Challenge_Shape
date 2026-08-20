@@ -1,4 +1,7 @@
 import java.awt.Graphics;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JPanel;
 
 
@@ -50,8 +53,4 @@ public class DrawingPanel extends JPanel {
         g.fillOval(x, y, diametre, diametre);
     }
 	
-	// Méthode permettant de dessiner un point.
-    public void drawPoint(Graphics g, int x, int y) {
-        g.drawPoint(x, y);
-    }
 }
