@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Circle extends Shape{
 
     private double radius;
@@ -23,5 +25,10 @@ public class Circle extends Shape{
         else{
             this.radius = radius;
         }
+    }
+
+    @Override
+    public void draw(Graphics g) {
+        
     }
 }
