@@ -58,39 +58,41 @@ le groupe d'apprendre!
 
 # Organisation du code
 
-Main
-  │
- crée
-  ↓
-La fenetre new JFrame
-  │
- puis crée
-  ↓
-La surface de dessin 
-  │
- puis crée les formes
-  ↓
-panel.addShape(new Circle(20,30,50));
+MAIN
+ │
+ ├── crée
+ ↓
+La fenêtre : new JFrame
+ │
+ ├── puis crée
+ ↓
+La surface de dessin : new IJobImpl()
+ │
+ ├── puis crée les formes
+ ↓
+panel.addShape(new Circle(20, 30, 50));
 Point p = new Point(100, 150);
-panel.addShape(new Circle(15,p));
-panel.addShape(new Square(50,200,200)); 
-  │
- ajoute la surface dans la fenêtre
-  ↓
+panel.addShape(new Circle(15, p));
+panel.addShape(new Square(50, 200, 200));
+ │
+ ├── ajoute la surface dans la fenêtre
+ ↓
 frame.add(panel);
-  │
-ajoute la surface dans la fenêtre
-  ↓
+ │
+ ├── définit la taille de la fenêtre
+ ↓
 frame.setSize(600, 400);
-  │
-configure ce qui doit se passer à la fermeture de la fenêtre
-  ↓
+ │
+ ├── configure ce qui doit se passer à la fermeture
+ ↓
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-  │
-maintenant que tout est configuré
-  ↓
-On affiche la fenêtre
+ │
+ ├── maintenant que tout est configuré
+ ↓
 frame.setVisible(true);
+ │
+ ↓
+La fenêtre est affichée
 
 
 la classe IJobImpl (DrawingPanel)
@@ -112,7 +114,7 @@ panel.addShape(new Circle(...))
   ↓
 addShape(Shape shape)
   │
-  ├── ajoute la forme dans la surface
+  ├── ajoute la liste de forme dans la surface
   │
   └── puis appelle repaint()
            │
@@ -120,7 +122,7 @@ addShape(Shape shape)
    cela entraine Swing à redessiner le panneau
            │
            ↓
-Swing cré un objet Graphics g grace à 
+Swing cré un objet Graphics g grace à
    paintComponent(Graphics g)
            │
            ├── super.paintComponent(g)
@@ -135,8 +137,8 @@ Swing cré un objet Graphics g grace à
                   ↓
        Chaque forme se dessine
        selon sa propre classe
-	   Elles le peuvent car on leur donne g
-	   qui contient les methode de dessin
+       Elles le peuvent car on leur donne g
+       qui contient les methode de dessin
 
 
 Shape est le classe abstraite mère des formes
