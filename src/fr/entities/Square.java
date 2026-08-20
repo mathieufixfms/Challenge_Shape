@@ -28,6 +28,6 @@ public class Square extends Shape {
 
     @Override
     public void draw(Graphics g) {
-        g.fillRect(getCenter().getX(), getCenter().getY(), getSide(), getSide());
+        g.drawRect(getCenter().getX(), getCenter().getY(), getSide(), getSide());
     }
 }
