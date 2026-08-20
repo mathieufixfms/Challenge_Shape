@@ -91,3 +91,67 @@ maintenant que tout est configuré
   ↓
 On affiche la fenêtre
 frame.setVisible(true);
+
+
+la classe IJobImpl (DrawingPanel)
+
+IJobImpl extends JPanel
+  │
+  │ crée
+  ↓
+La surface de dessin
+  │
+  │ contient
+  ↓
+List<Shape> shapes
+  │
+  │ Le Main ajoute des formes
+  ↓
+panel.addShape(new Circle(...))
+  │
+  ↓
+addShape(Shape shape)
+  │
+  ├── ajoute la forme dans la surface
+  │
+  └── puis appelle repaint()
+           │
+           ↓
+   cela entraine Swing à redessiner le panneau
+           │
+           ↓
+Swing cré un objet Graphics g grace à 
+   paintComponent(Graphics g)
+           │
+           ├── super.paintComponent(g)
+           │      ↓
+           │   nettoie le dessin
+           │
+           └── parcourt shapes
+                  │
+                  ↓
+             shape.draw(g)
+                  │
+                  ↓
+       Chaque forme se dessine
+       selon sa propre classe
+	   Elles le peuvent car on leur donne g
+	   qui contient les methode de dessin
+
+
+Shape est le classe abstraite mère des formes
+
+La classe Point n'est pas une fille de Shape car elle sert de coordonnées, pas de forme
+
+Chaque forme extend Shape et possede bien une methode draw adaptée au dessin specifique de la figure concernée
+exemple
+public void draw(Graphics g) {
+        g.drawRect(getCenter().getX(), getCenter().getY(), getSide(), getSide());
+    }
+
+ou
+
+@Override
+public void draw(Graphics g) {
+    g.fillOval(getCenter().getX(), getCenter().getY(), (int) getRadius(), (int) getRadius());
+}
