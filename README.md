@@ -57,7 +57,11 @@ le groupe d'apprendre!
 - Git / GitHub
 
 # Organisation du code
+# Organisation du code
 
+[svg](https://github.com/mathieufixfms/Challenge_Shape/blob/main/README.md#organisation-du-code)
+
+```text
 MAIN
  │
  ├── crée
@@ -93,10 +97,11 @@ frame.setVisible(true);
  │
  ↓
 La fenêtre est affichée
-
+```
 
 la classe IJobImpl (DrawingPanel)
 
+```text
 IJobImpl extends JPanel
   │
   │ crée
@@ -139,21 +144,37 @@ Swing cré un objet Graphics g grace à
        selon sa propre classe
        Elles le peuvent car on leur donne g
        qui contient les methode de dessin
-
+```
 
 Shape est le classe abstraite mère des formes
 
 La classe Point n'est pas une fille de Shape car elle sert de coordonnées, pas de forme
 
 Chaque forme extend Shape et possede bien une methode draw adaptée au dessin specifique de la figure concernée
+
 exemple
+
+```java
 public void draw(Graphics g) {
-        g.drawRect(getCenter().getX(), getCenter().getY(), getSide(), getSide());
-    }
+    g.drawRect(
+        getCenter().getX(),
+        getCenter().getY(),
+        getSide(),
+        getSide()
+    );
+}
+```
 
 ou
 
+```java
 @Override
 public void draw(Graphics g) {
-    g.fillOval(getCenter().getX(), getCenter().getY(), (int) getRadius(), (int) getRadius());
+    g.fillOval(
+        getCenter().getX(),
+        getCenter().getY(),
+        (int) getRadius(),
+        (int) getRadius()
+    );
 }
+```
