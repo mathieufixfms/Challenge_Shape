@@ -1,4 +1,5 @@
 package fr.entities;
+import java.awt.Graphics;
 
 public class Point {
 	private int x;
@@ -29,5 +30,6 @@ public class Point {
 	public String toString() {
 		return "Point [x=" + x + ", y=" + y + "]";
 	}
+
 }
 
