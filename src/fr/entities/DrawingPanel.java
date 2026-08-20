@@ -1,4 +1,7 @@
 import java.awt.Graphics;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JPanel;
 
 
@@ -49,5 +52,4 @@ public class DrawingPanel extends JPanel {
     public void fillCircle(Graphics g, int x, int y, int diametre) {
         g.fillOval(x, y, diametre, diametre);
     }
-
 }

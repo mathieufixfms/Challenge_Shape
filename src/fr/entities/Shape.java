@@ -12,7 +12,7 @@ public abstract class Shape {
     }
 
     public Shape(Point center) {
-        this.center = new Point(center.x, center.y);
+        this.center = new Point(center.getX(), center.getY());
     }
 
     public Point getCenter() {
