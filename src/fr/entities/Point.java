@@ -1,5 +1,6 @@
+import java.awt.Graphics;
 
-public class Point {
+public class Point extends Shape{
 	private int x;
 	private int y;
 
@@ -28,5 +29,13 @@ public class Point {
 	public String toString() {
 		return "Point [x=" + x + ", y=" + y + "]";
 	}
+	
+	// Chaque Shape doit avoir sa propre méthode draw().
+    @Override
+    public void draw(Graphics g) {
+
+        // Un point est représenté ici par un petit carré de 2x2 pixels.
+        g.fillRect(x, y, 2, 2);
+    }
 }
 

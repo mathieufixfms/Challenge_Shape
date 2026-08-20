@@ -49,9 +49,5 @@ public class DrawingPanel extends JPanel {
     public void fillCircle(Graphics g, int x, int y, int diametre) {
         g.fillOval(x, y, diametre, diametre);
     }
-	
-	// Méthode permettant de dessiner un point.
-    public void drawPoint(Graphics g, int x, int y) {
-        g.drawPoint(x, y);
-    }
+
 }
