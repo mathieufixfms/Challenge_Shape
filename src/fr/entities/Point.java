@@ -1,3 +1,4 @@
+package fr.entities;
 
 public class Point {
 	private int x;

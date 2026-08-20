@@ -1,3 +1,5 @@
+package fr.entities;
+
 import java.awt.*;
 import java.awt.Graphics;
 
@@ -12,7 +14,7 @@ public abstract class Shape {
     }
 
     public Shape(Point center) {
-        this.center = new Point(center.getX(), center.getY());
+        this.center = new Point(center.x, center.y);
     }
 
     public Point getCenter() {

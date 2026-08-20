@@ -1,3 +1,5 @@
+package fr.entities;
+
 import java.awt.*;
 
 public class Square extends Shape {
