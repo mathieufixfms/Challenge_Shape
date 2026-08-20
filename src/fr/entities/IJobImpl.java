@@ -38,19 +38,4 @@ public class IJobImpl extends JPanel {
 			shape.draw(g);
 		}
 	}
-	
-	// Méthode permettant de dessiner un point.
-    public void drawPoint(Graphics g, int x, int y) {
-        g.fillRect(x, y, 2, 2);
-    }
-
-	// Méthode permettant de dessiner un rectangle.
-    public void fillRect(Graphics g, int x, int y, int largeur, int hauteur) {
-        g.fillRect(x, y, largeur, hauteur);
-    }
-	
-	// Méthode permettant de dessiner un cercle.
-    public void fillCircle(Graphics g, int x, int y, int diametre) {
-        g.fillOval(x, y, diametre, diametre);
-    }
 }
