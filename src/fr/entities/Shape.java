@@ -8,15 +8,25 @@ import java.awt.Graphics;
 
 public abstract class Shape {
     private Point center;
-
+    /**
+     * Construit une forme à partir des coordonnées de son centre.
+     *
+     * @param x coordonnée x du centre
+     * @param y coordonnée y du centre
+     */
     public Shape(int x, int y) {
         this.center = new Point(x, y);
     }
-
+    /**
+     * Construit une forme à partir d'un point représentant son centre.
+     *
+     * @param center point central de la forme
+     */
     public Shape(Point center) {
         this.center = new Point(center.getX(), center.getY());
     }
 
+    //Accesseurs
     public Point getCenter() {
         return center;
     }
@@ -25,13 +35,22 @@ public abstract class Shape {
         this.center = center;
     }
 
+    /**
+     * Retourne une représentation textuelle de la forme.
+     *
+     * @return une chaîne contenant le centre de la forme
+     */
     @Override
     public String toString() {
         return "Shape [center=" + center + "]";
     }
 
-    // Chaque forme DOIT savoir se dessiner.
-    // Mais la façon de se dessiner dépend de la forme.
+    /**
+     * Dessine la forme dans un contexte graphique.
+     * Chaque classe fille doit définir sa propre méthode de dessin.
+     *
+     * @param g contexte graphique utilisé pour dessiner la forme
+     */
     public abstract void draw(Graphics g);
 
 }
